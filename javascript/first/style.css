@@ -1,0 +1,17 @@
+#container{
+    background: #4c4cff;
+    width: 300px;
+    border: solid;
+    border-radius: 10px;
+    padding: 2%;
+}
+
+#myBtn{
+    padding: 10px;
+    cursor: pointer;
+}
+
+#result{
+    margin-top: 20px;
+    font-size: 20px;
+}
