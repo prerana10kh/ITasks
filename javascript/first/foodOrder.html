@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Food Order</title>
+</head>
+<body>
+
+<script>
+
+function calculateTotal(burger, fries, soda) {
+    return burger + fries + soda;
+}
+
+var burgerName = "";
+var burgerTotal = 0;
+var friesName = "";
+var friesTotal = 0;
+var sodaName = "";
+var sodaTotal = 0;
+var deliveryConfirm = false;
+var orderTotal = 0;
+
+var burger = prompt("Select Burger:\n1. Large Tasty ($3)\n2. Small Dusty ($2)\n3. Big Chief ($7)");
+
+if (burger == 1) {
+    burgerName = "Large Tasty";
+    burgerTotal = 3;
+}
+else if (burger == 2) {
+    burgerName = "Small Dusty";
+    burgerTotal = 2;
+}
+else if (burger == 3) {
+    burgerName = "Big Chief";
+    burgerTotal = 7;
+}
+
+var fries = prompt("Select Fries:\n1. Small Fries ($1)\n2. Large Fries ($2)");
+
+if (fries == 1) {
+    friesName = "Small Fries";
+    friesTotal = 1;
+}
+else if (fries == 2) {
+    friesName = "Large Fries";
+    friesTotal = 2;
+}
+
+var soda = prompt("Select Soda:\n1. Small Soda ($1)\n2. Large Soda ($1.5)");
+
+if (soda == 1) {
+    sodaName = "Small Soda";
+    sodaTotal = 1;
+}
+else if (soda == 2) {
+    sodaName = "Large Soda";
+    sodaTotal = 1.5;
+}
+
+var askDelivery = prompt("Would you like delivery? (yes/no)");
+
+if (askDelivery == "yes") {
+    deliveryConfirm = true;
+}
+
+orderTotal = calculateTotal(burgerTotal, friesTotal, sodaTotal);
+
+if (deliveryConfirm == false) {
+    alert("Your Order Details:\n\n" + burgerName + " $" + burgerTotal + "\n" + friesName + " $" + friesTotal + "\n" + sodaName + " $" + sodaTotal + "\n\nTotal = $" + orderTotal);
+}
+else {
+    alert("Your Order Details:\n\n" + burgerName + " $" + burgerTotal + "\n" + friesName + " $" + friesTotal + "\n" + sodaName + " $" + sodaTotal + "\n\nTotal = $" + orderTotal + "\nYour order will be delivered!");
+}
+
+</script>
+
+</body>
+</html>
