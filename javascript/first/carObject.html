@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JavaScript Objects</title>
+</head>
+<body>
+
+<script>
+
+var car = {
+    make: "Lexus",
+    model: "LC500",
+    colour: "white"
+};
+
+console.log("Your " + car.colour + " " + car.make + " " + car.model + " was successfully created!");
+
+function buildCar(make, model, colour) {
+
+    this.make = make;
+    this.model = model;
+    this.colour = colour;
+
+    this.startEngine = function() {
+        alert("Vroom! Your engine has started running");
+    }
+
+    this.lightsOn = function() {
+        alert("Your car lights have been turned on");
+    }
+
+    alert("Your " + this.colour + " " + this.make + " " + this.model + " was successfully created!");
+}
+
+var myNewCar = new buildCar("Dodge", "Hellcat", "silver");
+
+myNewCar.startEngine();
+myNewCar.lightsOn();
+
+</script>
+
+</body>
+</html>
