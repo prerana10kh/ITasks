@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Listener Practice</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 50px;
+            font-family: Arial;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+            margin: 20px auto;
+            line-height: 200px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="heading">JavaScript Event Listener</h2>
+
+  
+    <button id="btn">Click Me</button>
+
+  
+    <div id="box">Hover Over Me</div>
+
+    <script>
+        // Click Event example
+        let button = document.getElementById("btn");
+        let heading = document.getElementById("heading");
+
+        button.addEventListener("click", function() {
+            heading.innerText = "Button Clicked!";
+            heading.style.color = "red";
+        });
+
+        //  Mouseover Event example
+        let box = document.getElementById("box");
+
+        box.addEventListener("mouseover", function() {
+            box.style.backgroundColor = "orange";
+        });
+
+        box.addEventListener("mouseout", function() {
+            box.style.backgroundColor = "lightblue";
+        });
+    </script>
+
+</body>
+</html>
