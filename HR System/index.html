@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joe's Coaches</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <div class="nav-wrapper">
+        <nav>
+            <ul class="nav-list">
+                <img id="icon" src="images/logo.jpg" alt="logo" height="80px">
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <!-- EMPLOYEES -->
+    <div class="employees">
+        <h2>Employees</h2>
+
+        <div class="employee-list">
+
+            <!-- Employee 1 -->
+            <div class="employee-card">
+                <img class="user-img" src="images/user1.webp" alt="">
+                <div class="employee-details">
+                    <h3><span class="name-format"></span>Ashton</span> <span class="name-format">Jacobs</span></h3>
+                    <p>Developer</p>
+                    <p>Tech Department</p>
+                    <p>ajacobs@jcoaches.com</p>
+                    <p>£35000</p>
+                </div>
+            </div>
+
+            <!-- Employee 2 -->
+            <div class="employee-card">
+                <img class="user-img" src="images/user2.webp" alt="">
+                <div class="employee-details">
+                    <h3><span class="name-format">Pamela</span> <span class="name-format">Peterson</span></h3>
+                    <p>Head of Marketing</p>
+                    <p>Marketing Department</p>
+                    <p>ppeterson@jcoaches.com</p>
+                    <p>£45000</p>
+                </div>
+            </div>
+
+            <!-- Employee 3 -->
+            <div class="employee-card">
+                <img class="user-img" src="images/user4.jpg" alt="">
+                <div class="employee-details">
+                    <h3><span class="name-format">Joe</span> <span class="name-format">Adams</span></h3>
+                    <p>CEO</p>
+                    <p>Executive Department</p>
+                    <p>jadams@jcoaches.com</p>
+                    <p>£80000</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- INTERVIEWS -->
+    <div class="interviews">
+        <h2>Upcoming Interviews</h2>
+
+        <div class="list-item">
+            <h3>Marketing</h3>
+            <p>Social Media Content Specialist</p>
+            <button class="accept-btn">Accept</button>
+            <button class="reject-btn">Reject</button>
+        </div>
+
+        <div class="list-item">
+            <h3>Driver</h3>
+            <p>Advanced Coach Driver</p>
+            <button class="accept-btn">Accept</button>
+            <button class="reject-btn">Reject</button>
+        </div>
+
+        <div class="list-item">
+            <h3>Software Developer</h3>
+            <p>Full-stack Developer</p>
+            <button class="accept-btn">Accept</button>
+            <button class="reject-btn">Reject</button>
+        </div>
+
+    </div>
+
+    <!-- ADD EMPLOYEE MODAL -->
+    <div id="employeeModal">
+        <div class="modal-header">
+            <p class="modal-header-content">Add New Employee</p>
+        </div>
+        <p>First Name: <input type="text" id="name" placeholder="First Name"></p>
+        <p>Last Name: <input type="text" id="surname" placeholder="Last Name"></p>
+        <p>Position: <input type="text" id="position" placeholder="Position"></p>
+        <p>Department: <input type="text" id="department" placeholder="Department"></p>
+        <p>Email: <input type="text" id="email" placeholder="Email"></p>
+        <p>Salary: <input type="text" id="salary" placeholder="Salary"></p>
+        <button id="confirmBtn" onclick="addEmployee()">Confirm</button>
+    </div>
+
+    <!-- ADD INTERVIEW MODAL -->
+    <div id="interviewModal">
+        <div class="modal-header">
+            <p class="modal-header-content">Add New Interview</p>
+        </div>
+        <p>Department: <input type="text" id="int-department" placeholder="Department"></p>
+        <p>Position: <input type="text" id="int-position" placeholder="Position"></p>
+        <button id="confirmIntBtn" onclick="addInterview()">Confirm</button>
+    </div>
+
+    <!-- FLOATING ACTION BUTTONS (bottom-right) -->
+    <div class="fab-container">
+        <button class="btn fab-btn" onclick="showAddEmpModal()">+ Add Employee</button>
+        <button class="btn fab-btn" onclick="showAddIntModal()">+ Add Interview</button>
+    </div>
+
+    <script src="JS/main.js"></script>
+
+</body>
+
+</html>
